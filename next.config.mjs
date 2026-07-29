@@ -10,7 +10,7 @@ const nextConfig = {
   assetPrefix: basePath,
   // Mirrors `basePath` into the client bundle so app code can prefix raw
   // asset URLs (SVG <image>, iframe src, etc.) that next/image/next/link
-  // don't touch automatically. See lib/basePath.ts.
+  // don't touch automatically.
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },

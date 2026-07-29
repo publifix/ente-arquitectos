@@ -3,21 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --color-cream: #FCF8F4;
-  --color-linen: #ECE4DB;
-  --color-sky: #C6D7E7;
-  --color-mist: #B6C5D2;
-  --color-ink: #000000;
-  --color-coral: #DF5A5C;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
-  background: var(--color-cream);
-  color: var(--color-ink);
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* SplitText line-mask wrapper: each rendered line gets clipped so it can
-   rise from below without revealing the line above/below it. */
-.line-mask {
-  overflow: clip;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
