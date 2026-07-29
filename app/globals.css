@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #FCF8F4;
+  --color-linen: #ECE4DB;
+  --color-sky: #C6D7E7;
+  --color-mist: #B6C5D2;
+  --color-ink: #000000;
+  --color-coral: #DF5A5C;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* SplitText line-mask wrapper: each rendered line gets clipped so it can
+   rise from below without revealing the line above/below it. */
+.line-mask {
+  overflow: clip;
+}
